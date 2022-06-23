@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logo .point {
+  color: #CE1212;
+}
+
+nav {
+  background: white;
+  position: fixed;
+}
+
+nav .list-nav {
+  font-weight: 400;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+nav .list-nav .deep-menu {
+  display: none;
+  margin-top: -130px;
+  margin-left: 175px;
+  position: absolute;
+  background-color: white;
+}
+
+nav .list-nav .btn-nav {
+  padding: 8px 20px;
+  border-radius: 42px;
+  margin-left: 100px;
+}
+
+#hero {
+  background-color: #EEEEEE;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+}
+
+#hero .part {
+  margin-top: 80px;
+}
+
+#hero .part h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 80px;
+  font-weight: 300;
+}
+
+#hero .part .tableandvideo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+  text-align: left;
+}
+
+#hero .part .tableandvideo .video {
+  margin-left: 50px;
+}
+
+#hero .part .tableandvideo .btn-nav {
+  padding: 11px 38px;
+  border-radius: 42px;
+}
+
+#hero .part .tableandvideo i {
+  color: #CE1212;
+  font-size: 30px;
+}
+
+#hero .part img {
+  width: 510px;
+  height: 510px;
+}
+
+@media only screen and (max-width: 1170px) {
+  #hero .part {
+    text-align: center;
+  }
+  #hero .part .tableandvideo {
+    margin-left: 150px;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  #hero .part {
+    text-align: center;
+  }
+  #hero .part .tableandvideo {
+    margin-left: 150px;
+  }
+}
+
+#menu {
+  min-height: 1000px;
+  text-align: center;
+}
+
+#menu .details {
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+#menu .details p {
+  color: gray;
+  font-size: 13px;
+  height: 20px;
+}
+
+#menu .details h2 {
+  font-family: "Amatic SC", cursive;
+  height: 55px;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+#menu .details h2 span {
+  color: #CE1212;
+  font-family: "Amatic SC", cursive;
+}
+
+#menu .details .starters {
+  color: #CE1212;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+}
+
+#menu .mycard {
+  border: 0;
+}
+
+#menu .mycard .gray {
+  color: #91919F;
+}
+
+#menu .mycard .red {
+  color: #CE1212;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 480px) {
+  #menu .cards {
+    margin-left: 100px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
