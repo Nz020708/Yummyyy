@@ -29,7 +29,7 @@ namespace Yummy.Controllers
             {
                 Menu = _db.Menu.ToList()
             };
-            return View();
+            return View(home);
         }
 
         public IActionResult Privacy()

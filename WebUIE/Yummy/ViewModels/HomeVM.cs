@@ -8,6 +8,6 @@ namespace Yummy.ViewModels
 {
     public class HomeVM
     {
-        public List<Menu> Menu { get; set; }
+        public List<Models.Menu> Menu { get; set; }
     }
 }

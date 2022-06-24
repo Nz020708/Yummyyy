@@ -41,17 +41,21 @@
 
             <div class="row">
                 <div class="card-deck cards">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card mycard">
-                            <img class="card-img-top" src="~/assets/images/menu-item-1.png" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Magnam Tiste</h5>
-                                <p class="card-text gray">Lorem, deren, trataro, filede, nerada</p>
-                                <p class="card-text red">$5.95</p>
+                    @foreach (var food in Model.Menu)
+                    {
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card mycard">
+                                <img class="card-img-top" src="~/assets/images/@food.Url" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">@food.Title</h5>
+                                    <p class="card-text gray">@food.Description</p>
+                                    <p class="card-text red">$@food.Price</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
+                    }
+
+                    @*<div class="col-lg-4 col-md-12">
                         <div class="card mycard">
                             <img class="card-img-top" src="~/assets/images/menu-item-2 (1).png" alt="Card image cap">
                             <div class="card-body">
@@ -100,7 +104,7 @@
                                 <p class="card-text red">$9.95</p>
                             </div>
                         </div>
-                    </div>
+                    </div>*@
                 </div>
 
             </div>

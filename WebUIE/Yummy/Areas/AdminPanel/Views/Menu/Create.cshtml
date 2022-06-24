@@ -1,0 +1,54 @@
+﻿@using Yummy.ViewModels.Menu
+@model MenuVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Add a new dish:</h4>
+
+            <form class="forms-sample" method="post" asp-action="Index" >
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" asp-for="Name">Name:</label>
+                    <div class="col-sm-9">
+                        <input asp- type="text" class="form-control" placeholder="Name..." asp-for="Name">
+                        <span class="text-danger" asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" asp-for="Image">Select photo of a dish:</label>
+                    <div class="col-sm-9">
+                        <input type="file" asp-for="Image">
+                        <span class="text-danger" asp-validation-for="Image"></span>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" asp-for="Ingredients">Ingredients:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Ingredients..." asp-for="Ingredients">
+                        <span class="text-danger" asp-validation-for="Ingredients"></span>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" asp-for="Price">Price:</label>
+                    <div class="col-sm-9">
+                        <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" placeholder="Price..." asp-for="Price">
+                        <span class="text-danger" asp-validation-for="Price"></span>
+
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary me-2">Save</button>
+                <a asp-action="Index" class="btn btn-light">Cancel</a>
+            </form>
+            @section Scripts{
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.4/jquery.validate.min.js" integrity="sha512-FOhq9HThdn7ltbK8abmGn60A/EMtEzIzv1rvuh+DqzJtSGq8BRdEN0U+j0iKEIffiw/yEtVuladk6rsG4X6Uqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" integrity="sha512-o6XqxgrUsKmchwy9G5VRNWSSxTS4Urr4loO6/0hYdpWmFUfHqGzawGxeQGMDqYzxjY9sbktPbNlkIQJWagVZQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            }
+        </div>
+    </div>
+</div>

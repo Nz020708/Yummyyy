@@ -1,0 +1,48 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelper
+@model IEnumerable<Menu>
+@{
+    ViewData["Title"] = "Index";
+    int count = 1;
+
+}
+
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Menu Table</h4>
+           
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Photos</th>
+                            <th>Names of dishes</th>
+                            <th>Ingredients</th>
+                            <th>Settings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var food in Model)
+                        {
+                        <tr>
+                            <td>@count</td>
+                            <td>
+                                <img class="card-img-top" src="~/assets/images/@food.Url" alt="Card image cap">
+                            </td>
+                            <td>@food.Title</td>
+                            <td>@food.Description</td>
+                            <td class="text-danger">$@food.Price </td>
+                            <td> <a class=" btn btn-warning">Edit <i class="mdi mdi-table-edit"></i></a> </td>
+                            <td> <a class=" btn btn-danger">Delete <i class="mdi mdi-delete-sweep"></i></a></td>
+                        </tr>
+                            count++;
+                        }
+                        <a class=" btn btn-dark" asp-action="Create" asp-controller="Menu" asp-area="AdminPanel">Add a new dish</a>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
